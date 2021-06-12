@@ -1,19 +1,47 @@
-import {Avatar,Grid,Flex,Badge,Box,Text,Heading, IconButton, Button, useColorModeValue, Image, WrapItem } from "@chakra-ui/react"
+import {
+  Avatar,
+  Grid,
+  Flex,
+  Badge,
+  Box,
+  Text,
+  Heading,
+  IconButton,
+  Button,
+  useColorModeValue,
+  Image,
+  WrapItem,
+} from "@chakra-ui/react";
 import { SiNextDotJs } from "@react-icons/all-files/si/SiNextDotJs";
 import { SiNodeDotJs } from "@react-icons/all-files/si/SiNodeDotJs";
 import { SiReact } from "@react-icons/all-files/si/SiReact";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
-import { Link } from "@chakra-ui/react"
+import { Link } from "@chakra-ui/react";
 const about = () => {
-    return (
+  return (
+    <Flex align="center" justify="center">
+      <Flex
+        align="center"
+        justify="center"
+        bg="tel"
+        h={["100%", "100%", "50%", "50%"]}
+      >
+        <Box maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
+          Mi nombre es Enmanuel Alfonzo, soy un desarrollador web enfocado en
+          JavaScript. Me encantaría que conozcan un poco más de mí, de mis
+          experiencias en el área, de mis trabajos y de los conocimientos que
+          hasta ahora he podido obtener. 
+        </Box>
+      </Flex>
+    </Flex>
+    /** 
         <Flex 
           align="center"
           justify="center"
       
         >
 
-            {/* mobile */}
             <Flex
             w="100%"
             align="center"
@@ -82,13 +110,13 @@ const about = () => {
                 </Flex>
 
             </Flex>
-            {/* Desktop */}
             <Flex
               display={['none','none','flex','flex']}
             ></Flex>
 
         </Flex>
-    )
-}
+        */
+  );
+};
 
-export default about
+export default about;

@@ -15,7 +15,7 @@ export default function Layout({ children }) {
           align="center"
           justify ="center"
           display={['none', 'none','flex','flex']}
-          maxW ="md"
+          maxW ="lg"
           p={2}
           flexDir="column"
         >
