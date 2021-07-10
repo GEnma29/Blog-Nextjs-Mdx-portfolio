@@ -36,6 +36,11 @@ const Navbar = () => {
                 About
               </Button>
             </Link>
+            <Link href="/projects">
+              <Button variant="ghost" mr={2}>
+                Projects
+              </Button>
+            </Link>
             <Link href="/contact">
               <Button variant="ghost" mr={2}>
                 Contact
@@ -83,6 +88,11 @@ const Navbar = () => {
             <Link href="/about">
               <Button variant="ghost" m={4}>
                 About
+              </Button>
+            </Link>
+            <Link href="/projects">
+              <Button variant="ghost" m={4}>
+                Projects
               </Button>
             </Link>
             <Link href="/contact">

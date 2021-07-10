@@ -18,6 +18,7 @@ const overrides = {
     config,
     styles: {
         global: {
+    
           // styles for the `body`
           body: {
               margin: "0",
@@ -25,7 +26,7 @@ const overrides = {
           },
           // styles for the `a`
           a: {
-            color: "teal.500",
+            color: "teal",
             _hover: {
               textDecoration: "underline",
             },

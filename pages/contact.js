@@ -14,6 +14,8 @@ const contact = () => {
         > 
             <Heading alignSelf="center">Contact</Heading>
             <Flex
+            align="center"
+            justify="center"
             p={4}
              mt={8}
              zIndex="base" 

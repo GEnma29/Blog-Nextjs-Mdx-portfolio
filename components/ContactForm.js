@@ -17,8 +17,8 @@ const  ContactFrom = () => {
         return <p>Thanks for joining!</p>;
     }
   return (
-    <>
-    <form onSubmit={handleSubmit}>
+    <Flex  align="center" justify="center">
+    <form  onSubmit={handleSubmit}>
        <FormLabel colorScheme="teal"  m={2} size={['sm','sm','md','md']} htmlFor="email">
            Name
        </FormLabel>
@@ -63,7 +63,8 @@ const  ContactFrom = () => {
          </Button>
       </Flex>
     </form>
-    </>
+    </Flex>
+
   )
 }
 
