@@ -1,5 +1,6 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import Terminalanimate from "../components/Terminalanimate";
 
 const projects = () => {
 
@@ -27,6 +28,7 @@ const projects = () => {
     <h1>Hello Developers</h1>
     {/* Element to display typing strings */}
     <span ref={el}></span>
+    <Terminalanimate />
     </div>
   );
 };

@@ -23,6 +23,8 @@ import { SiReact } from "@react-icons/all-files/si/SiReact";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { Link } from "@chakra-ui/react";
+import Figure from "../components/Figure";
+import Terminalanimate from '../components/Terminalanimate'
 import NextImage from 'next/image'
 const about = () => {
 //// const for color ///////////////////////////////////////////////////
@@ -55,7 +57,7 @@ const about = () => {
   // Create Ref element.
   const el = useRef("Web Developer");
 
-  useEffect(() => {
+ /* useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
         "Web Developer",
@@ -77,120 +79,70 @@ const about = () => {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, []);*/
   return (
-    <Flex align="center" justify="center" flexDir="column">
-    <Flex display={['none','none','flex','flex']} zIndex="base" position="absolute" top= "-150px" left= '-50px' >
-          <motion.div
-          initial="hidden"
-          animate={ControlFig1}
-          transition={{ duration: 0.2 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
-          >
-            <NextImage  src="/iPhone.png" alt="me" width="3400" height="2250" priority />
-          </motion.div>
-        </Flex>
-      <Flex  zIndex="docked" w="100%" h="100vh" justifyContent="center" align="center">
-        <Flex
-          align="center"
-          flexDir="column"
-          marginTop={['4','4','8','8']}
-          justify="center"
-          bg="tel"
-          p={2}
-          h={["100%", "100%", "50%", "50%"]}
-        >
-          <Heading casing="justify" size="3xl" color={title}>
-            Hello,
-          </Heading>
-          <Heading m={2} align="center" casing="justify" size="2xl" color={title}>
-            I'm Enmanuel Alfonzo
-          </Heading>
-          <Flex m={2}>
-            <Link
-              href="https://www.linkedin.com/in/enmanuel-alfonzo-angulo-612b18188/"
-              color={title}
-              isExternal
-            >
-              <Icon
-                as={FaLinkedin}
-                w={["8", "8", "12", "12"]}
-                h={["8", "8", "12", "12"]}
-                p={1}
-              />
-            </Link>
-            <Link href="https://github.com/GEnma29" color={title} isExternal>
-              <Icon
-                as={FaGithub}
-                w={["8", "8", "12", "12"]}
-                h={["8", "8", "12", "12"]}
-                p={1}
-              />
-            </Link>
-          </Flex>
-          <Box align="center" maxW="lg" borderRadius="lg" m={2}>
-            <Text fontSize="xl" fontWeight="700" color={title}>
-              I'm <span ref={el}></span>
-            </Text>
-          </Box>
-        </Flex>
-      </Flex>
-
+    <Flex
+    align="center"
+    justify="center"
+    >
+      {/** mobile */}
       <Flex
-        id="background"
-        w="100%"
-        h="100vh"
-        justifyContent="center"
-        align="center"
-        flexDirection="row"
-        wrap="wrap"
+      display={['flex','flex','none','none']}
+      align="center"
+      justify="center"
+      flexDirection="column"
+
       >
-        <motion.div
-          id="background"
-          initial="hidden"
-          animate={Elemte1}
-          transition={{ duration: 0.3 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
+        <section id="Hi" 
         >
-          <Box
-            p={2}
-            maxW={["sm", "sm", "md", "md"]}
-            justifyContent="center"
-            align="center"
-            flexDir="column"
-            borderWidth="1px"
-            borderRadius="lg"
+          <Flex
+         
+          flexDirection="column"
           >
-            <Heading color="teal" p={4}>
-              About me{" "}
-            </Heading>
-            <Text textAlign="justify" p={2}>
-              I'm a creative Frontend-developer (somethings backend developer ),
-              passionate about modern and clean interfaces. I love programming,
-              Listing music, traveling, and cooking.{" "}
-            </Text>
-          </Box>
-        </motion.div>
+            <Flex
+            flexDirection="column"
+            >
+              <Flex>
+                <Terminalanimate />
+              </Flex>
+              <Heading>Hi,</Heading>
+              <Heading>I'm Enmanuel,</Heading>
+              <Heading>web developer</Heading>
+            </Flex>
+            <Text mt={2}>FrontEnd and Backend Developer</Text>
+            <Button>Contact to me</Button>
+          </Flex>
+
+        </section>
+        <section id="me">
+          <Flex
+          align="center"
+          justify="center"
+          >
+            <Text>section 2</Text>
+          </Flex>
+
+        </section>
+        <section id="skills">
+          <Flex
+          align="center"
+          justify="center"
+          >
+            <Text>section 3</Text>
+          </Flex>
+
+        </section>
       </Flex>
-      <Flex w="100%" h="100vh" justifyContent="center" align="center">
-        <motion.div
-          initial="hidden"
-          animate={Element2}
-          transition={{ duration: 0.3 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
-        >
-          <Text>Stack</Text>
-        </motion.div>
-      </Flex>
+      <style jsx>{`
+        section {
+          display: flex;
+          min-height: 100vh;
+          width: 100%;
+          align-items: center;
+          justify-contet: center;
+
+
+      `}</style>
     </Flex>
     /** 
         <Flex 
@@ -273,6 +225,7 @@ const about = () => {
 
         </Flex>
         */
+       
   );
 };
 
