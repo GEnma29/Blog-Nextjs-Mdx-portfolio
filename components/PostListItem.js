@@ -1,8 +1,8 @@
 import { Box, Heading, Flex, Text, Tag } from "@chakra-ui/react";
 const PostListItem = ({ title, date, tags }) => {
     return (
-        <Box borderBottom="1px" borderColor="brand.900" p="4">
-        <Heading  size={["sm","sm","md","md"]} my={2}>
+        <Box borderBottom="1px" borderColor="teal.500" p="4">
+        <Heading color={'teal'}  size={["sm","sm","md","md"]} my={2}>
           {title}
         </Heading>
         <Flex align="center" fontSize="sm" color="grayblue.100">

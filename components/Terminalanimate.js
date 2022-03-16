@@ -1,7 +1,10 @@
 import React from "react";
 import { Flex, Text, Box, Icon } from "@chakra-ui/react";
 
-const Terminalanimate = ({ code }) => {
+
+
+
+const Terminalanimate = ({ code, firstComand, secoundComand }) => {
   return (
     <>
       <div className="Glass">
@@ -36,9 +39,9 @@ const Terminalanimate = ({ code }) => {
         <Flex justifyItems="flex-start" flexDirection="column" m={2}>
           <Flex flexDirection="row">
             <Text color="teal">/user/pc1:</Text>
-            <Text> git init kashdakjsdklas</Text>
+            <Text>{firstComand}</Text>
           </Flex>
-          <Text>npm i react react-dom</Text>
+          <Text>{secoundComand}</Text>
           <Text>{code}</Text>
         </Flex>
       </div>

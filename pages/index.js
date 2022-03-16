@@ -25,7 +25,7 @@ export default function Index({ posts }) {
       <Flex
       flexDirection="column"
       >
-      <Heading as="h1" size="xl">
+      <Heading  as="h1" size="xl">
         👋 Hola!
       </Heading>
       <Text mt={(2, 4)} fontSize={["md", "md", "lg", "lg"]}>
@@ -34,15 +34,16 @@ export default function Index({ posts }) {
       </Text>
       <Flex p="2" align="center" justify="center">
         <ul>
-          {posts.map((post) => (
-            <Box
+          {posts.map((post, index) => (
+            <Box as={'li'} 
+              key={index}
               m="4"
               maxW={["lg", "md", "sm", "sm"]}
               overflow="hidden"
             >
               <Box p={2}>
                 <motion.div>
-                  <li key={post.data.id}>
+                 
                     <Link
                       as={`/posts/${post.filePath.replace(/\.mdx?$/, "")}`}
                       href={`/posts/[slug]`}
@@ -55,7 +56,6 @@ export default function Index({ posts }) {
                         />
                       </a>
                     </Link>
-                  </li>
                 </motion.div>
               </Box>
             </Box>

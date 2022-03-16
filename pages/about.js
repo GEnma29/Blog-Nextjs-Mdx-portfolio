@@ -57,7 +57,7 @@ const about = () => {
   // Create Ref element.
   const el = useRef("Web Developer");
 
- /* useEffect(() => {
+useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
         "Web Developer",
@@ -67,7 +67,7 @@ const about = () => {
       ], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
-      typeSpeed: 100,
+      typeSpeed: 50,
       backSpeed: 100,
       backDelay: 100,
       smartBackspace: true,
@@ -79,7 +79,8 @@ const about = () => {
     return () => {
       typed.destroy();
     };
-  }, []);*/
+  }, []);
+  
   return (
     <Flex
     align="center"
@@ -103,14 +104,21 @@ const about = () => {
             flexDirection="column"
             >
               <Flex>
-                <Terminalanimate />
+                <Terminalanimate 
+                firstComand={` Enmanuel Dev init ..`}
+                code={<span ref={el}></span>} 
+                />
               </Flex>
               <Heading>Hi,</Heading>
               <Heading>I'm Enmanuel,</Heading>
               <Heading>web developer</Heading>
             </Flex>
             <Text mt={2}>FrontEnd and Backend Developer</Text>
-            <Button>Contact to me</Button>
+            <Link mt={[2,4]} href="/contact">
+            <Button>
+              Contact to me
+            </Button>
+            </Link>
           </Flex>
 
         </section>
