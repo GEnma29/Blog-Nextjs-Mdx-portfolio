@@ -38,8 +38,7 @@ const Terminalanimate = ({ code, firstComand, secoundComand }) => {
         </Flex>
         <Flex justifyItems="flex-start" flexDirection="column" m={2}>
           <Flex flexDirection="row">
-            <Text color="teal">/user/pc1:</Text>
-            <Text>{firstComand}</Text>
+            <Text color="teal">{`/user/pc1: Enmanuel dev init ... `}</Text>
           </Flex>
           <Text>{secoundComand}</Text>
           <Text>{code}</Text>

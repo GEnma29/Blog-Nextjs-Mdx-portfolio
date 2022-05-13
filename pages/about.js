@@ -26,6 +26,8 @@ import { Link } from "@chakra-ui/react";
 import Figure from "../components/Figure";
 import Terminalanimate from '../components/Terminalanimate'
 import NextImage from 'next/image'
+import AnimateText from "../components/AnimateText";
+import Summary from "../components/Summary";
 const about = () => {
 //// const for color ///////////////////////////////////////////////////
   const title = useColorModeValue("#ff9400", "#ffa500")
@@ -88,16 +90,20 @@ useEffect(() => {
     >
       {/** mobile */}
       <Flex
-      display={['flex','flex','none','none']}
+      display={'flex'}
       align="center"
       justify="center"
       flexDirection="column"
+
 
       >
         <section id="Hi" 
         >
           <Flex
-         
+          width={'100%'}
+          height={'100vh'}
+          align="center"
+          justify="center"
           flexDirection="column"
           >
             <Flex
@@ -109,9 +115,9 @@ useEffect(() => {
                 code={<span ref={el}></span>} 
                 />
               </Flex>
-              <Heading>Hi,</Heading>
-              <Heading>I'm Enmanuel,</Heading>
-              <Heading>web developer</Heading>
+              <AnimateText >Hi,</AnimateText>
+              <AnimateText>I'm Enmanuel,</AnimateText>
+              <AnimateText>web developer</AnimateText>
             </Flex>
             <Text mt={2}>FrontEnd and Backend Developer</Text>
             <Link mt={[2,4]} href="/contact">
@@ -124,10 +130,13 @@ useEffect(() => {
         </section>
         <section id="me">
           <Flex
-          align="center"
-          justify="center"
+          justify="flex-start"
+          flexDirection="column"
+          width={'100%'}
+          height={'100%'}
           >
-            <Text>section 2</Text>
+            <Heading as={'h3'} size={'md'} >About me</Heading>
+            <Summary />
           </Flex>
 
         </section>
@@ -135,6 +144,8 @@ useEffect(() => {
           <Flex
           align="center"
           justify="center"
+          width={'100%'}
+          height={'100%'}
           >
             <Text>section 3</Text>
           </Flex>
@@ -144,7 +155,7 @@ useEffect(() => {
       <style jsx>{`
         section {
           display: flex;
-          min-height: 100vh;
+          min-height: 100%;
           width: 100%;
           align-items: center;
           justify-contet: center;
