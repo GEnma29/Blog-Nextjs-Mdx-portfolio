@@ -5,10 +5,11 @@ import Stackcomponent from './TerminalComponents/Stackcomponent'
 
 const Summary = () => {
 
-  const [state, setState] = useState(false)
+  const [state, setState] = useState('Stack')
   return (
     <Box 
     width={'100%'}
+    p={2}
     height={'100%'}
     mt={'1rem'}
     display={'flex'}
@@ -19,7 +20,7 @@ const Summary = () => {
         flexDir={'column'}
         alignItems={'center'}
         justifyContent={'flex-start'}
-        w={['100%', '100%','50%', '50%']}
+        w={'100%'}
         borderRadius='8px'
         p={1}
         bg={'#E2E8F0'}
@@ -30,8 +31,8 @@ const Summary = () => {
            alignItems={'center'}
            justifyContent={'flex-start'}
           >
-            <ButtonTerminal onClick={()=>setState(!state)} active={!state}  label={'Summary'}/>
-            <ButtonTerminal onClick={()=>setState(!state)} active={state}  label={'Stack'} />
+            <ButtonTerminal onClick={()=>setState('Summary')} active={ state === 'Summary'}  label={'Summary'}/>
+            <ButtonTerminal onClick={()=>setState('Stack')} active={state === 'Stack'}  label={'Stack'} />
           </Box>
           <Box
           display={'flex'}
@@ -40,7 +41,7 @@ const Summary = () => {
           w={'100%'}
           >
             {
-              state ? (
+              state === "Stack" ? (
                 <Box
                 p={2}
                 >
@@ -52,24 +53,24 @@ const Summary = () => {
                 </Box>
               ):(
                 <Box
-                p={2}
                 >
+                  <Box
+                  width={'100%'}
+                  p={2}
+                  >
                   <Text
                   color={'whiteAlpha.800'}
                   >
-                    Summary
+                   Building quality websites and applications with React js,
+                   work with frameworks like Next.js always focus to write clean
+                    code and Build scalable solutions 
+
                   </Text>
+                  </Box>
                 </Box>
               )
             }
           </Box>
-        </Box>
-        <Box
-         display={['none', 'none', 'flex', 'flex']}
-         w={['100%', '100%','50%', '50%']}
-        >
-  
-
         </Box>
     </Box>
   )
