@@ -8,7 +8,7 @@ const Summary = () => {
   const [state, setState] = useState('Stack')
   return (
     <Box 
-    width={'100%'}
+    width={['100%','100%', '600px', '600px']}
     p={2}
     height={'100%'}
     mt={'1rem'}
@@ -23,6 +23,7 @@ const Summary = () => {
         w={'100%'}
         borderRadius='8px'
         p={1}
+        minH={136}
         bg={'#E2E8F0'}
         >
           <Box
@@ -53,6 +54,7 @@ const Summary = () => {
                 </Box>
               ):(
                 <Box
+                minH={136}
                 >
                   <Box
                   width={'100%'}
