@@ -28,6 +28,7 @@ import Terminalanimate from '../components/Terminalanimate'
 import NextImage from 'next/image'
 import AnimateText from "../components/AnimateText";
 import Summary from "../components/Summary";
+import CardsWorks from "../components/Cards/CardsWorks";
 const about = () => {
 //// const for color ///////////////////////////////////////////////////
   const title = useColorModeValue("#ff9400", "#ffa500")
@@ -134,20 +135,60 @@ useEffect(() => {
           flexDirection="column"
           width={'100%'}
           height={'100%'}
+          mb={['1rem', '1rem', '4rem','4rem']}
           >
-            <Heading as={'h3'} size={'md'} >About me</Heading>
+            <Heading ml={'.5rem'} as={'h3'} size={'md'} >About me</Heading>
+            <Box
+            display={'flex'}
+            w={'100%'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            >
             <Summary />
+            </Box>
           </Flex>
 
         </section>
         <section id="skills">
           <Flex
+          mt={4}
           align="center"
           justify="center"
           width={'100%'}
           height={'100%'}
           >
-            <Text>section 3</Text>
+            <Box
+            width={'100%'}
+            >
+             <Heading ml={'.5rem'} as={'h3'} size={'md'}>
+               Work Experience
+             </Heading>
+            <Box
+            display={'flex'}
+            justifyContent={'space-around'}
+            width={'100%'}
+            flexWrap={'wrap'}
+            >
+            <CardsWorks 
+           urlImg ={'https://i.ibb.co/TMCdHzP/Simpol-Logo.jpg'} 
+           CompanyName ={'Simpol'}
+           LinkPage={'https://www.simpol.finance/'}
+           Position={'Frontend Developer'}
+           />
+           <CardsWorks 
+           urlImg ={'https://i.ibb.co/5T0J0Xf/Shalder-logo.jpg'} 
+           CompanyName ={'Shalder'}
+           LinkPage={'https://www.shalder.co/'}
+           Position={'Frontend Developer'}
+           />
+           <CardsWorks 
+           urlImg ={'https://i.ibb.co/v4Pcg92/Vikua-Logo.jpg'} 
+           CompanyName ={'vikua'}
+           LinkPage={'https://vikua.com/'}
+           Position={'intership'}
+           />
+           </Box>
+           </Box>
           </Flex>
 
         </section>

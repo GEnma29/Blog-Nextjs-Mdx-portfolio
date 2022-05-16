@@ -10,7 +10,7 @@ const Footer = () => {
         h="10vh"
         >
             <Box>
-                <Text>Hecho con ❤  by Enmanuel Alfonzo</Text>
+                <Text>made with ❤  by Enmanuel Alfonzo</Text>
             </Box>
         </Flex>
     )
